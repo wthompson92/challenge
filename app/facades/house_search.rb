@@ -8,7 +8,7 @@ class HouseSearch
 
 
     def members
-      @_members ||= ()@service.members_by_house).map do |member_data|
+      @_members ||= (@service.members_by_house).map do |member_data|
         Member.new(member_data)
       end
     end

@@ -10,8 +10,8 @@ class Westros
 
   def conn
     Faraday.new(url: "http://westerosapi.herokuapp.com/api/v1") do |faraday|
-      faraday.param ['house']  = @house
-      faraday.param ['api_key'] = "egg")
+      faraday.params['house'] = @house
+      faraday.params['api_key'] = "egg"
       faraday.adapter Faraday.default_adapter
     end
   end
